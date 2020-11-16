@@ -2,6 +2,7 @@ package ch.zhaw.gpi.benachrichtigungsservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.PropertySource;
 
 /**
  * Hauptklasse für die Spring Boot-Applikation, welche diese mit allen
@@ -20,6 +21,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @Component/@Service annotierten Klassen im ClassPath erkennt.
  */
 @SpringBootApplication
+@PropertySource("classpath:mail-template.properties")
 public class BenachrichtigungServiceApplication {
 
     /**
